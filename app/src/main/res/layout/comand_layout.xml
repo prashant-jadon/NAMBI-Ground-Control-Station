@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">'
+
+    <Button
+        android:id="@+id/onSub"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:text="ON SUBSYSTEMS"/>
+
+    <Button
+        android:id="@+id/offSub"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OFF SUBSYSTEMS"
+        android:layout_below="@+id/onSub"/>
+
+    <Button
+        android:id="@+id/RESET"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/offSub"
+        android:text="RESET"/>
+
+    <Button
+        android:layout_below="@id/RESET"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="STOP ALL SUBSYSTEMS"/>
+
+
+
+
+
+
+</RelativeLayout>

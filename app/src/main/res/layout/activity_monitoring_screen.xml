@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightblack"
+    android:orientation="vertical"
+    tools:context=".MonitoringScreen">
+
+    <TextView
+        android:id="@+id/titlegcs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/backborder_title"
+        android:fontFamily="monospace"
+        android:padding="17dp"
+        android:text="@string/ground_station_nambi"
+        android:textColor="@color/white"
+        android:textSize="40sp" />
+
+    <DigitalClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/backborder_title"
+        android:padding="10dp"
+        android:textColor="#E98C00"
+        android:textSize="40sp" />
+
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="20dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/teamdetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="50dp"
+        android:text="@string/team_details"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/teamdetail"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="43dp"
+        android:background="@drawable/backborder_title"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="70dp"
+        android:paddingBottom="10dp"
+        android:text="@string/team_id_n_046"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="70dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="24dp"
+        android:contentDescription="@string/todo1"
+        android:src="@drawable/flag" />
+
+
+    <RelativeLayout
+        android:id="@+id/ard"
+        android:layout_width="232dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="#449C2E"
+        android:orientation="horizontal"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/porttext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/port"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/portOfArd"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/baurdtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/porttext"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/baud_rate"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:textColor="@color/black"
+            android:id="@+id/baud"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="42dp"
+             />
+
+
+        <Button
+            android:id="@+id/sendbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/baurdtext"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/run"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btnClearInput"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/baud"
+            android:layout_marginStart="0dp"
+            android:layout_toEndOf="@+id/sendbutton"
+            android:backgroundTint="@color/white"
+            android:text="PAUSE"
+            android:textColor="@color/black" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/gcsdetail"
+        android:layout_width="232dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ard"
+        android:layout_alignParentEnd="true"
+        android:background="#449C2E"
+        android:padding="1dp">
+
+        <TextView
+            android:id="@+id/groundstationdetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/ground_station_details"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lattitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/groundstationdetail"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/latitude"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/latitudenum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/groundstationdetail"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/lattitle"
+            android:text="@string/_172_893282Text"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/longitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lattitle"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/longitude"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/longitudeEnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/latitudenum"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="13dp"
+            android:layout_toEndOf="@+id/longitude"
+            android:text="@string/_172_893282"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/statedetail"
+        android:layout_width="232dp"
+        android:layout_height="210dp"
+        android:layout_above="@+id/gcsdetail"
+        android:layout_alignParentEnd="true"
+        android:background="#449C2E"
+        android:padding="18dp">
+
+        <TextView
+            android:id="@+id/softwarestatetitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text="@string/software_state"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/boot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/boot"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/idle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="63dp"
+            android:text="@string/idle"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/launch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="104dp"
+            android:text="@string/launch"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/deploy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="146dp"
+            android:text="@string/deploy"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/softwarestatetitle"-->
+<!--            android:layout_marginStart="80dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_toEndOf="@+id/boot"-->
+<!--            android:text="@string/on"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textStyle="bold" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/softwarestatetitle"-->
+<!--            android:layout_marginStart="80dp"-->
+<!--            android:layout_marginTop="40dp"-->
+<!--            android:layout_toEndOf="@+id/boot"-->
+<!--            android:text="@string/offText2"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textStyle="bold" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/softwarestatetitle"-->
+<!--            android:layout_marginStart="80dp"-->
+<!--            android:layout_marginTop="80dp"-->
+<!--            android:layout_toEndOf="@+id/boot"-->
+<!--            android:text="@string/offText"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textStyle="bold" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/softwarestatetitle"-->
+<!--            android:layout_marginStart="80dp"-->
+<!--            android:layout_marginTop="120dp"-->
+<!--            android:layout_toEndOf="@+id/boot"-->
+<!--            android:text="@string/off"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textStyle="bold" />-->
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/stats"
+        android:layout_width="930dp"
+        android:layout_height="430dp"
+        android:layout_alignParentBottom="true"
+
+        android:background="#2F2F2F"
+        android:backgroundTint="@color/cardview_dark_background">
+
+        <TextView
+            android:id="@+id/mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/mode"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <CheckBox
+            android:id="@+id/chkScroll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:checked="true"
+            android:text="@string/scroll"
+            android:visibility="gone" />
+
+        <CheckBox
+            android:id="@+id/chkReceiveText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/read"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/modeRecieve"
+            android:layout_width="200dp"
+            android:layout_height="90dp"
+            android:layout_below="@+id/mode"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/black"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:hint="@string/flight"
+            android:paddingLeft="10dp"
+            android:paddingTop="17dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="17dp"
+            android:textColor="#E98C00"
+            android:textColorHint="#E98C00"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/altitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="240dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/altitude"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/altitudeRecieve"
+            android:layout_width="200dp"
+            android:layout_height="90dp"
+            android:layout_below="@+id/altitude"
+            android:layout_marginStart="240dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/black"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:hint="@string/_120_4"
+            android:paddingLeft="10dp"
+            android:paddingTop="17dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="17dp"
+            android:textColor="#E98C00"
+            android:textColorHint="#E98C00"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/voltage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="480dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/voltageText"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/voltageRecieve"
+            android:layout_width="200dp"
+            android:layout_height="90dp"
+            android:layout_below="@+id/altitude"
+            android:layout_marginStart="480dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/black"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:hint="@string/_7_38"
+            android:paddingLeft="10dp"
+            android:paddingTop="17dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="17dp"
+            android:textColor="#E98C00"
+            android:textColorHint="#E98C00"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/softstatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="730dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/soft_status"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/softstatusRieceve"
+            android:layout_width="200dp"
+            android:layout_height="90dp"
+            android:layout_below="@+id/altitude"
+            android:layout_marginStart="720dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/black"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:hint="@string/launched"
+            android:paddingLeft="10dp"
+            android:paddingTop="17dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="17dp"
+            android:textColor="#E98C00"
+            android:textColorHint="#E98C00"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/gpsaltiutude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="730dp"
+            android:layout_marginTop="160dp"
+            android:text="@string/gps_altitude"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/gpsaltiutudeReiceve"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/altitude"
+            android:layout_marginStart="720dp"
+            android:layout_marginTop="140dp"
+            android:background="@color/black"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:hint="@string/_121_5"
+            android:paddingLeft="10dp"
+            android:paddingTop="17dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="17dp"
+            android:textColor="#E98C00"
+            android:textColorHint="#E98C00"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/gpsstats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="480dp"
+            android:layout_marginTop="160dp"
+            android:text="GPS STATS"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/gpsstatsRecieve"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/altitude"
+            android:layout_marginStart="480dp"
+            android:layout_marginTop="140dp"
+            android:background="@color/black"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:hint="@string/_3"
+            android:paddingLeft="10dp"
+            android:paddingTop="17dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="17dp"
+            android:textColor="#E98C00"
+            android:textColorHint="#E98C00"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/gpslongitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="240dp"
+            android:layout_marginTop="160dp"
+            android:text="@string/gps_longitude"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/gpslongitudeRecieve"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/altitude"
+            android:layout_marginStart="240dp"
+            android:layout_marginTop="140dp"
+            android:background="@color/black"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:hint="@string/_77_4892"
+            android:paddingLeft="10dp"
+            android:paddingTop="17dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="17dp"
+            android:textColor="#E98C00"
+            android:textColorHint="#E98C00"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/gpslatitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="160dp"
+            android:text="@string/gps_latitude"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/gpslatitudeReiceve"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mode"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="140dp"
+            android:background="@color/black"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:hint="@string/_27_2045"
+            android:paddingLeft="10dp"
+            android:paddingTop="17dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="17dp"
+            android:textColor="#E98C00"
+            android:textColorHint="#E98C00"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/gyroSpin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="300dp"
+            android:text="@string/gyro_spin_rate"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/gryoSpinRecieve"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mode"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="290dp"
+            android:background="@color/black"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:hint=""
+            android:paddingLeft="10dp"
+            android:paddingTop="17dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="17dp"
+            android:textColor="#E98C00"
+            android:textColorHint="#E98C00"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="240dp"
+            android:layout_marginTop="300dp"
+            android:text="@string/temperature"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/temperatureRecieve"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/altitude"
+            android:layout_marginStart="240dp"
+            android:layout_marginTop="290dp"
+            android:background="@color/black"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:hint="@string/_23_0"
+            android:paddingLeft="10dp"
+            android:paddingTop="17dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="17dp"
+            android:textColor="#E98C00"
+            android:textColorHint="#E98C00"
+            android:textSize="30sp" />
+
+
+        <TextView
+            android:id="@+id/command"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="480dp"
+            android:layout_marginTop="300dp"
+            android:text="@string/cmd_echo"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/commandRecieve"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/altitude"
+            android:layout_marginStart="480dp"
+            android:layout_marginTop="290dp"
+            android:background="@color/black"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:hint="@string/cxon"
+            android:paddingLeft="10dp"
+            android:paddingTop="17dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="17dp"
+            android:textColor="#E98C00"
+            android:textColorHint="#E98C00"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/accelerometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="730dp"
+            android:layout_marginTop="300dp"
+            android:text="@string/accelerometer"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/accelerometerRecieve"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/altitude"
+            android:layout_marginStart="720dp"
+            android:layout_marginTop="290dp"
+            android:background="@color/black"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:hint="@string/_121"
+            android:paddingLeft="10dp"
+            android:paddingTop="17dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="17dp"
+            android:textColor="#E98C00"
+            android:textColorHint="#E98C00"
+            android:textSize="30sp" />
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/charts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/stats"
+        android:layout_marginStart="323dp"
+        android:backgroundTint="@color/cardview_dark_background"
+        android:text="@string/chart"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/commandSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/stats"
+        android:layout_marginStart="30dp"
+        android:layout_toEndOf="@id/charts"
+        android:backgroundTint="@color/cardview_dark_background"
+        android:text="Command"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/DownloadCSV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/stats"
+        android:layout_marginStart="-290dp"
+        android:layout_toEndOf="@id/charts"
+        android:backgroundTint="@color/cardview_dark_background"
+        android:text="SAVE.CSV"
+        android:textSize="23sp" />
+
+    <Button
+        android:id="@+id/simulation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/stats"
+        android:layout_marginStart="30dp"
+        android:layout_toEndOf="@id/commandSend"
+        android:backgroundTint="@color/cardview_dark_background"
+        android:text="SIMULATION"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/buttonResume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/statedetail"
+        android:layout_alignParentRight="true"
+        android:text="STOP" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:id="@+id/pasue"/>
+
+
+</RelativeLayout>
